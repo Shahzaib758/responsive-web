@@ -1,0 +1,130 @@
+/* Document Section */
+body {
+    color: #333;
+}
+
+:root{
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
+#doc {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1.25em;
+}
+
+#doc .container {
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.doc-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 47%;
+}
+
+.doc-para {
+    font-size: 1.25rem;
+} 
+
+.doc-image {
+    width: 47%;
+}
+
+#doc img {
+    display: block;
+    margin-left: auto;
+    width: 200px;
+}
+
+/* Main Document Section */
+
+#main-doc {
+    padding: 40px 20px;
+}
+
+#main-doc .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 40px;
+}
+
+#main-doc .grid > *:first-child {
+    background-color: var(--light-color);
+}
+
+#main-doc .card {
+    padding: 30px;
+}
+
+#main-doc nav {
+    margin: 10px 0px;
+}
+
+nav p {
+    padding: 10px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+#main-doc .card:nth-child(2) h3,p {
+    margin: 12px 0px;
+    font-weight: 300;
+}
+
+#main-doc .card:nth-child(2) .fas {
+    display: inline;
+    color: var(--light-color);
+    font-size: 1.1rem;
+    margin : 0 10px;
+}
+
+#main-doc .card:nth-child(2) .info {
+    background-color: var(--success-color);
+    padding: 10px ;
+    color: var(--light-color);
+}
+
+.doc-btn {
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 1rem;
+}
+
+.doc-btn:hover {
+    font-weight: bold;
+}
+
+.cammad {
+    background-color: #333;
+    padding: 10px;
+    color: var(--light-color);
+}
+
+@media screen and (max-width:769px) {
+    #doc .container {
+        flex-direction: column;
+    }
+
+    .doc-detail ,.doc-image  {
+        text-align: center;
+        width: 100%;
+    }
+
+    #main-doc .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+    
+}
